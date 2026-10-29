@@ -1,0 +1,19 @@
+[package]
+name = "idna-rust"
+version = "3.20.1"
+edition = "2021"
+description = "Rust UTS-46/IDNA2008 kernel for the idna-rust Python distribution"
+license = "BSD-3-Clause"
+repository = "https://github.com/John-Cusack/idna-rust"
+
+[lib]
+name = "_idna_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.26", features = ["extension-module"] }
+unicode-normalization = "0.1"
+
+[profile.release]
+lto = true
+codegen-units = 1
