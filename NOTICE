@@ -1,0 +1,14 @@
+idna-rust
+=========
+
+This project is a port of `idna` (https://github.com/kjd/idna),
+Copyright (c) 2013-2026, Kim Davies and contributors, BSD-3-Clause.
+
+The `idna/` Python package is derived from upstream release 3.20
+(HISTORY.md: Unicode 18.0.0 tables), with a pure-Python tier-1 fast path
+and a Rust accelerator kernel added. All upstream copyright and license
+terms in LICENSE.md apply to the derived files.
+
+Rust kernel (`src/`, UTS-46/IDNA2008 implementation operating on tables
+generated from the upstream data files): Copyright (c) 2026 the
+idna-rust contributors, BSD-3-Clause.
