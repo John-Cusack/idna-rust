@@ -45,7 +45,11 @@ still wins 2.63x with 10% invalid mixed in.
   package's own data files plus the build interpreter's `unicodedata`
   (Unicode 15.0 on CPython 3.12.3 — matches the oracle exactly).
   Vendored output is committed; rerun on upstream bumps.
-- `tests/` — upstream suite copy + differential corpus + bench.
+- `tests/` — upstream suite copy + kernel-vs-pure differential pytest.
+- `bench/` — frozen-workload benches (`bench_tier1.py`, `bench_port.py`,
+  `ceiling.py`; lane paths overridable via `IDNA_LANE_SCRATCH`).
+- `tier1/` — the pure-Python tier-1 patch + upstream patch note +
+  `gen_tier1_patch.py` (regenerates the patch mechanically from anchors).
 
 ## License
 
